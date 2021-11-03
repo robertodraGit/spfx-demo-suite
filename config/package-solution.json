@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "clock-client-side-solution",
-    "id": "492500ad-e786-467a-812d-e4e5a470d911",
+    "id": "8228ea7a-827b-44b2-9093-7b5f341adc9a",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
@@ -12,7 +12,7 @@
       "websiteUrl": "",
       "privacyUrl": "",
       "termsOfUseUrl": "",
-      "mpnId": ""
+      "mpnId": "Undefined-1.13.0"
     }
   },
   "paths": {
