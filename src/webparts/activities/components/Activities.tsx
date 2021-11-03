@@ -1,25 +1,30 @@
-import * as React from 'react';
-import styles from './Activities.module.scss';
-import { IActivitiesProps } from './IActivitiesProps';
-import { escape } from '@microsoft/sp-lodash-subset';
+import * as React from "react";
+import {FC} from "react";
+import {IActivitiesProps} from './IActivitiesProps';
+import {DefaultButton, PrimaryButton} from '@fluentui/react';
+import {DonutChart, IChartProps} from '@fluentui/react-charting';
 
-export default class Activities extends React.Component<IActivitiesProps, {}> {
-  public render(): React.ReactElement<IActivitiesProps> {
+
+const Activities: FC<IActivitiesProps> = (props) => {
+    const chartData = [
+        {legend: 'first', data: 40, color: "#000"},
+        {legend: 'second', data: 20, color: "#222"},
+        {legend: 'third', data: 30, color: "#444"},
+        {legend: 'fourth', data: 10, color: "#666"},
+    ];
+
+    const data: IChartProps = {
+        chartTitle: 'Donut chart example',
+        chartData: chartData,
+    };
+
     return (
-      <div className={ styles.activities }>
-        <div className={ styles.container }>
-          <div className={ styles.row }>
-            <div className={ styles.column }>
-              <span className={ styles.title }>Welcome to SharePoint!</span>
-              <p className={ styles.subTitle }>Customize SharePoint experiences using Web Parts.</p>
-              <p className={ styles.description }>{escape(this.props.description)}</p>
-              <a href="https://aka.ms/spfx" className={ styles.button }>
-                <span className={ styles.label }>Learn more</span>
-              </a>
-            </div>
-          </div>
+        <div className="ms-Grid" dir="ltr">
+            <DefaultButton text="siuuuuuuuuu"/>
+            <PrimaryButton text="sium"/>
+            <DonutChart chartLabel="sium" data={data} innerRadius={55} />
         </div>
-      </div>
     );
-  }
-}
+};
+
+export default Activities;
